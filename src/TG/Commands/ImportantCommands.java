@@ -24,7 +24,8 @@ public class ImportantCommands extends BotCommand {
                     reply.setText(tokenMsg[1].toUpperCase() + " : " + json.getJSONObject(currency).getDouble(conversion) + " " + conversion);
                 } catch (Exception e) { reply.setText("Usage: /price [crypto_currency] [currency]"); }
                 break;
-            default: break;
+            default:
+                break;
         }
     }
 }

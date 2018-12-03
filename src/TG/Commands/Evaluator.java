@@ -11,19 +11,22 @@ public class Evaluator extends BotCommand {
 
     @Override
     public void command(Message message, String txt, SendMessage reply) {
-        if (txt.length()>=6 && txt.substring(0,5).equals("calc ")) {
-            ScriptEngineManager mgr = new ScriptEngineManager();
-            ScriptEngine engine = mgr.getEngineByName("JavaScript");
-            String foo = txt.substring(5);
-            System.out.println(foo);
-            String ans = "?";
-            try{
-                ans = engine.eval(foo).toString();
-            }
-            catch (Exception e){
+        String[] command = txt.toLowerCase().split(" ");
 
-            }
-            reply.setText("Answer : " + ans);
+        switch (command[0]) {
+            case "/calc":
+                ScriptEngineManager mgr = new ScriptEngineManager();
+                ScriptEngine engine = mgr.getEngineByName("JavaScript");
+                String ans = "?";
+                try {
+                    ans = engine.eval(command[1]).toString();
+                } catch (Exception e) {
+                    reply.setText("Cannot evaluate. Type /help for list of commands.");
+                }
+                reply.setText("Answer : " + ans);
+                break;
+            default:
+                break;
         }
     }
 }
