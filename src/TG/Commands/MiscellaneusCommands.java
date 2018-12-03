@@ -17,10 +17,10 @@ public class MiscellaneusCommands extends BotCommand {
         if (txt.toLowerCase().contains("your name")) {
             reply.setText("My name is Cryptobot.");
         }
-        if (txt.toLowerCase().matches("\bhi\b")) {
+        if (txt.toLowerCase().matches("hi")) {
             reply.setText("Hello.");
         }
-        if (txt.toLowerCase().matches("\bhello\b")) {
+        if (txt.toLowerCase().matches("hello")) {
             reply.setText("Hi.");
         }
 
@@ -44,7 +44,7 @@ public class MiscellaneusCommands extends BotCommand {
                     reply.setText("Your last name is " + message.getChat().getLastName() + ".");
                     break;
                 case "/help":
-                    reply.setText("/help\tget commands\n/id\tchat id\n/price [crypto_currency] [currency]\tget crypto currency rates\n/reverse [msg]\n/calc [expression]");
+                    reply.setText("CryptoBot commands: \n/price [crypto_currency] [currency]\n/id\n/calc [expression]\n/reverse [msg]\n/help");
                     break;
                 default:
                     break;
