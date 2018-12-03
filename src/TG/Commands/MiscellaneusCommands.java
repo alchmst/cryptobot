@@ -44,7 +44,7 @@ public class MiscellaneusCommands extends BotCommand {
                     reply.setText("Your last name is " + message.getChat().getLastName() + ".");
                     break;
                 case "/help":
-                    reply.setText("/help\tget commands\n/id\tchat id\n/price [crypto_currency] [currency]\tget crypto currency rates\n/reverse [msg]");
+                    reply.setText("/help\tget commands\n/id\tchat id\n/price [crypto_currency] [currency]\tget crypto currency rates\n/reverse [msg]\ncalc [expression]");
                     break;
                 default:
                     break;

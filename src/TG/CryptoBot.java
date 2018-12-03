@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import java.util.List;
 
 public class CryptoBot extends TelegramLongPollingBot {
-    List<Class<?>> commandClasses;
+    private List<Class<?>> commandClasses;
     public CryptoBot(){
         commandClasses = ClassFinder.find("TG.Commands");
     }
@@ -47,12 +47,12 @@ public class CryptoBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotUsername() {
-        return "Wew";
+        return "CryptoBot";
     }
 
     @Override
     public String getBotToken() {
-        return "640775922:AAFwz_RNP1wdZJKAI_c8NOFQyQ7uFB4Kxm8";
+        return "767053057:AAH2lamcQ8yF1DOGwhYWI9eExoVvApKwLPU";
     }
 
 }
