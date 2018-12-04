@@ -23,6 +23,9 @@ public class MiscellaneusCommands extends BotCommand {
         if (txt.toLowerCase().matches("hello")) {
             reply.setText("Hi.");
         }
+        if (txt.toLowerCase().contains("knock knock")) {
+            reply.setText("...");
+        }
 
         try {
             switch (command[0].toLowerCase()) {
